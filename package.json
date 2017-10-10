@@ -1,0 +1,58 @@
+{
+    "name": "bree",
+    "version": "0.0.0",
+    "description": "My tiptop module",
+    "license": "MIT",
+    "repository": "OmgImAlexis/bree",
+    "author": {
+        "name": "Alexis Tyler",
+        "email": "xo@wvvw.me",
+        "url": "wvvw.me"
+    },
+    "bin": "cli.js",
+    "engines": {
+        "node": ">=4"
+    },
+    "scripts": {
+        "test": "xo && nyc ava"
+    },
+    "files": [
+        "index.js",
+        "cli.js"
+    ],
+    "keywords": [
+        "cli-app",
+        "cli"
+    ],
+    "dependencies": {
+        "meow": "^3.7.0"
+    },
+    "devDependencies": {
+        "ava": "^0.19.1",
+        "coveralls": "^2.13.1",
+        "nyc": "^10.3.2",
+        "xo": "^0.18.2"
+    },
+    "nyc": {
+        "reporter": [
+            "lcov",
+            "text"
+        ]
+    },
+    "xo": {
+        "space": 4,
+        "rules": {
+            "space-before-function-paren": [
+                "error",
+                "never"
+            ]
+        },
+        "envs": [
+            "node",
+            "es6"
+        ]
+    },
+    "ava": {
+        "babel": "inherit"
+    }
+}
